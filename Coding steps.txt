@@ -1,0 +1,7 @@
+1) I want to build a website that gets movie information (title, director, year, and so on) from an API 
+and render it.
+We need a search bar to work with the API
+We need to fetch the information from that API
+We need to render that information on screen (poster, title, year, director and summary) to start with
+
+2) I want to integrate this with a "to watch" list, so I need buttons to add and remove movies to that list.
