@@ -1,7 +1,8 @@
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Random from "./components/Random";
-import React, { useState, useEffect } from "react";
+import Watchlist from "./components/Watchlist";
 
 function App() {
   const [randomMovie, setRandomMovie] = useState();
@@ -44,6 +45,7 @@ function App() {
     <div className="App">
       <Header />
       <Random movieData={movieData} randomNumber={randomNumber} />
+      <Watchlist movieData={movieData} />
     </div>
   );
 }

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import App from "../App";
+import React from "react";
 
 export default function Random(props) {
   return (
