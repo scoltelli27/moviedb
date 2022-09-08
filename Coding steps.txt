@@ -5,3 +5,5 @@ We need to fetch the information from that API
 We need to render that information on screen (poster, title, year, director and summary) to start with
 
 2) I want to integrate this with a "to watch" list, so I need buttons to add and remove movies to that list.
+I could do this with localstorage? 
+Should I add users? 
