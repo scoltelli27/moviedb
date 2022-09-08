@@ -1,12 +1,12 @@
 import "./App.css";
 import Header from "./components/Header";
-import Searchbar from "./components/Searchbar";
+import Random from "./components/Random";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Searchbar />
+      <Random />
     </div>
   );
 }
