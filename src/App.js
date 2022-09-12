@@ -27,7 +27,8 @@ function App() {
         if (
           data.adult === false &&
           data.original_language === "en" &&
-          data.poster_path
+          data.poster_path &&
+          data.vote_count > 500
         ) {
           console.log(data);
           setMovieData({
