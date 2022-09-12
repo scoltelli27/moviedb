@@ -4,10 +4,13 @@
   box-sizing: border-box;
 }
 
+
+
 body {
   margin: 0;
   line-height: 1.5;
   min-height: 100vh;
+  background-color: hsl(30, 38%, 92%);
 }
 
 
@@ -17,7 +20,49 @@ img{
   margin: auto;
 }
 
-
+/* App content */
 .App{
   text-align: center;
+  padding-inline: 6em;
+  margin-inline:auto;
+  max-width: 80rem;
+  
+}
+
+.randomMovie {
+  width: 50%;
+  height: 100vh;
+}
+
+.watchList {
+  width:50%;
+  height: 100vh;
+}
+
+.mainContent{
+  overflow:hidden;
+  display: flex;
+  background: linear-gradient(90deg, rgba(18, 17, 111, 1), rgba(203, 187, 233, 1));
+  border-radius: 10px;
+  margin-bottom:20px;
+}
+
+/*Random content*/
+.randomButton {
+  border: none;
+  border-radius: 10px;
+  width: 20%;
+  height: 5%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.randomButton:hover {
+  opacity: 0.5;
+}
+
+.moviePoster{
+  max-width: 100%;
+  display: block;
+  border-radius: 10px;
 }

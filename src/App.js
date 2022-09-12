@@ -44,8 +44,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Random movieData={movieData} randomNumber={randomNumber} />
-      <Watchlist movieData={movieData} />
+      <div className="mainContent">
+        <Random movieData={movieData} randomNumber={randomNumber} />
+        <Watchlist movieData={movieData} />
+      </div>
     </div>
   );
 }

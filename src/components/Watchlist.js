@@ -31,11 +31,11 @@ export default function Watchlist(props) {
   }
   return (
     <>
-      <div>
+      <div className="watchList">
         <button onClick={createNewWatch}>
           Add to watch: {props.movieData.title}
         </button>
-        <div className="watchList" key={toWatch.id}>
+        <div key={toWatch.id}>
           <h1>
             {toWatch.map((watch) => (
               <>
