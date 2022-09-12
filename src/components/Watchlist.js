@@ -23,6 +23,12 @@ export default function Watchlist(props) {
     setCurrentWatchId(newWatch.id);
   }
 
+  function removeWatch(event, toWatchId) {
+    event.stopPropagation();
+    setToWatch((oldWatch) =>
+      oldWatch.filter((toWatch) => toWatch.id !== toWatchId)
+    );
+  }
   return (
     <>
       <div>
@@ -32,7 +38,13 @@ export default function Watchlist(props) {
         <div className="watchList" key={toWatch.id}>
           <h1>
             {toWatch.map((watch) => (
-              <div>{watch.body}</div>
+              <>
+                <div>{watch.body}</div>
+
+                <button onClick={(event) => removeWatch(event, watch.id)}>
+                  Remove
+                </button>
+              </>
             ))}
           </h1>
         </div>
