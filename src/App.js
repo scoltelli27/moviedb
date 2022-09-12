@@ -3,8 +3,13 @@ import "./App.css";
 import Header from "./components/Header";
 import Random from "./components/Random";
 import Watchlist from "./components/Watchlist";
+import Spinner from "./components/Spinner";
 
 function App() {
+  // Spinner state
+  const [isLoading, setIsLoading] = useState(false);
+
+  //Movie Data states
   const [randomMovie, setRandomMovie] = useState();
   const [movieData, setMovieData] = useState({
     title: "",
@@ -19,6 +24,7 @@ function App() {
 
   // useEffect to fetch the API data and store it in state
   useEffect(() => {
+    setIsLoading(true);
     fetch(
       `https://api.themoviedb.org/3/movie/${randomMovie}?api_key=53bdb2a3faf53552f09348f942d242c9`
     )
@@ -28,14 +34,14 @@ function App() {
           data.adult === false &&
           data.original_language === "en" &&
           data.poster_path &&
-          data.vote_count > 500
+          data.vote_count > 150
         ) {
-          console.log(data);
           setMovieData({
             title: data.title,
             overview: data.overview,
             poster: `https://image.tmdb.org/t/p/w500${data.poster_path}`,
           });
+          setIsLoading(false);
         } else {
           randomNumber();
         }
@@ -46,6 +52,7 @@ function App() {
     <div className="App">
       <Header />
       <div className="mainContent">
+        {isLoading && <Spinner />}
         <Random movieData={movieData} randomNumber={randomNumber} />
         <Watchlist movieData={movieData} />
       </div>
