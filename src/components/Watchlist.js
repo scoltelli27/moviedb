@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 export default function Watchlist(props) {
-  const [toWatch, setToWatch] = useState([]);
-  const [currentWatchId, setCurrentWatchId] = React.useState(
+  const [toWatch, setToWatch] = useState(
+    JSON.parse(localStorage.getItem("watch")) || []
+  );
+
+  const [currentWatchId, setCurrentWatchId] = useState(
     (toWatch[0] && toWatch[0].id) || ""
   );
+
+  useEffect(() => {
+    localStorage.setItem("watch", JSON.stringify(toWatch));
+  }, [toWatch]);
 
   function createNewWatch() {
     const newWatch = {
