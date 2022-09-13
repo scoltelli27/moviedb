@@ -33,8 +33,8 @@ export default function Watchlist(props) {
   return (
     <>
       <div className="watchList">
-        <button onClick={createNewWatch}>
-          Add to watch: {props.movieData.title}
+        <button className="randomButton" onClick={createNewWatch}>
+          Add to list
         </button>
         <div className="movieList" key={toWatch.id}>
           <h1>
@@ -47,7 +47,10 @@ export default function Watchlist(props) {
                 />
                 <div>{watch.body}</div>
 
-                <button onClick={(event) => removeWatch(event, watch.id)}>
+                <button
+                  className="randomButton"
+                  onClick={(event) => removeWatch(event, watch.id)}
+                >
                   Remove
                 </button>
               </>

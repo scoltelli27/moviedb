@@ -53,8 +53,10 @@ function App() {
       <Header />
       <div className="mainContent">
         {isLoading && <Spinner />}
-        <Random movieData={movieData} randomNumber={randomNumber} />
-        <Watchlist movieData={movieData} />
+        {!isLoading && (
+          <Random movieData={movieData} randomNumber={randomNumber} />
+        )}
+        {!isLoading && <Watchlist movieData={movieData} />}
       </div>
     </div>
   );
