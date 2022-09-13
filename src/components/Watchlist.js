@@ -44,7 +44,7 @@ export default function Watchlist(props) {
                 src={watch.poster}
                 alt="Movie poster"
               />
-              <h2>{watch.body}</h2>
+              <h3>{watch.body}</h3>
 
               <button
                 className="randomButton"

@@ -32,6 +32,7 @@ img {
 }
 
 .randomMovie {
+  padding: 10px;
   max-width: 50%;
   height: 100vh;
 }
@@ -43,7 +44,7 @@ img {
 
 
 .mainContent {
-  overflow: hidden;
+  overflow:scroll;
   display: flex;
   background-color: rgb(37, 49, 109);
   border-radius: 10px;
@@ -68,6 +69,7 @@ img {
   max-width: 100%;
   display: block;
   border-radius: 10px;
+  
 }
 
 /* Spinner */
@@ -107,7 +109,12 @@ img {
 }
 
 /* Watchlist */
+
+h3 {
+  width: 80%;
+}
 .watchList {
+  padding: 10px;
   width: 50%;
   height: 100vh;
 }
