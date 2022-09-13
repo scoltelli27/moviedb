@@ -17,6 +17,7 @@ export default function Watchlist(props) {
     const newWatch = {
       id: nanoid(),
       body: props.movieData.title,
+      poster: props.movieData.poster,
     };
 
     setToWatch((prevWatch) => [newWatch, ...prevWatch]);
@@ -35,10 +36,15 @@ export default function Watchlist(props) {
         <button onClick={createNewWatch}>
           Add to watch: {props.movieData.title}
         </button>
-        <div key={toWatch.id}>
+        <div className="movieList" key={toWatch.id}>
           <h1>
             {toWatch.map((watch) => (
               <>
+                <img
+                  className="smallPoster"
+                  src={watch.poster}
+                  alt="Movie poster"
+                />
                 <div>{watch.body}</div>
 
                 <button onClick={(event) => removeWatch(event, watch.id)}>

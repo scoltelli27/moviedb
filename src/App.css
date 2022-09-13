@@ -34,10 +34,7 @@ img{
   height: 100vh;
 }
 
-.watchList {
-  width:50%;
-  height: 100vh;
-}
+
 
 .mainContent{
   overflow:hidden;
@@ -97,4 +94,19 @@ img{
   height: 350px;
   left: 46%;
   top: 55%;
+}
+
+/* Watchlist */
+.watchList {
+  width:50%;
+  height: 100vh;
+}
+
+.movieList {
+  width: 100%;
+  display:flex;
+}
+
+.smallPoster {
+  max-width: 10%;
 }
