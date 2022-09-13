@@ -36,26 +36,24 @@ export default function Watchlist(props) {
         <button className="randomButton" onClick={createNewWatch}>
           Add to list
         </button>
-        <div className="movieList" key={toWatch.id}>
-          <h1>
-            {toWatch.map((watch) => (
-              <>
-                <img
-                  className="smallPoster"
-                  src={watch.poster}
-                  alt="Movie poster"
-                />
-                <div>{watch.body}</div>
+        <div key={toWatch.id}>
+          {toWatch.map((watch) => (
+            <div className="movieList">
+              <img
+                className="smallPoster"
+                src={watch.poster}
+                alt="Movie poster"
+              />
+              <h2>{watch.body}</h2>
 
-                <button
-                  className="randomButton"
-                  onClick={(event) => removeWatch(event, watch.id)}
-                >
-                  Remove
-                </button>
-              </>
-            ))}
-          </h1>
+              <button
+                className="randomButton"
+                onClick={(event) => removeWatch(event, watch.id)}
+              >
+                Remove
+              </button>
+            </div>
+          ))}
         </div>
       </div>
     </>

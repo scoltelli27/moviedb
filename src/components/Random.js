@@ -5,7 +5,9 @@ export default function Random(props) {
     <>
       <div className="randomMovie">
         <h2>{props.movieData.title}</h2>
-        <span>{props.movieData.overview.substring(0, 250)}...</span>
+        <span className="movieData">
+          {props.movieData.overview.substring(0, 250)}...
+        </span>
 
         <img
           className="moviePoster"
