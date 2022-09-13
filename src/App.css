@@ -10,7 +10,7 @@ body {
   margin: 0;
   line-height: 1.5;
   min-height: 100vh;
-  background-color: hsl(30, 38%, 92%);
+  background-color: rgb(95, 111, 148);
 }
 
 
@@ -39,7 +39,7 @@ img{
 .mainContent{
   overflow:hidden;
   display: flex;
-  background: linear-gradient(90deg, rgba(18, 17, 111, 1), rgba(203, 187, 233, 1));
+  background-color: rgb(37, 49, 109);
   border-radius: 10px;
   margin-bottom:20px;
 }
