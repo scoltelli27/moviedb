@@ -50,7 +50,7 @@ export default function Watchlist(props) {
               <div className="listText">
                 <h3 className="smallTitle">{watch.body}</h3>
                 <span className="smallOverview">
-                  {watch.overview.substring(0, 250)}...
+                  {watch.overview.substring(0, 200)}...
                 </span>
               </div>
               <img
