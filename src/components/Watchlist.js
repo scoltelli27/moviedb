@@ -36,7 +36,7 @@ export default function Watchlist(props) {
   return (
     <>
       <div className="watchList">
-        <button className="randomButton" onClick={createNewWatch}>
+        <button className="addButton" onClick={createNewWatch}>
           Add to list
         </button>
         <div key={toWatch.id}>

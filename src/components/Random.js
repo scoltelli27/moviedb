@@ -15,7 +15,7 @@ export default function Random(props) {
           alt="Movie poster"
         />
         <button className="randomButton" onClick={props.randomNumber}>
-          Get a random movie
+          Randomize
         </button>
       </div>
     </>

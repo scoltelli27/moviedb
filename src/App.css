@@ -57,17 +57,18 @@ img {
   max-width: 80rem;
 }
 
-.randomMovie {
-  padding: 10px;
-  max-width: 50%;
-  height: 100vh;
+h1 { 
+  color: #111; 
+  font-family: 'Courier Prime', monospace;
+  font-size: 50px; 
+  font-weight:bold;
+  font-style: italic;
+  line-height: 64px; 
+  margin: 0 0 0; 
+  padding: 20px 30px; 
+  text-align: center; 
+  text-transform: uppercase; 
 }
-
-.movieData {
-  width: 30%;
-  font-size: 1em;
-}
-
 
 
 .mainContent {
@@ -77,26 +78,54 @@ img {
   background-color: rgb(37, 49, 109);
   border-radius: 10px;
   margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 /*Random content*/
 .title {
-  font-weight: bold;
+  font-weight:700;
   font-size: 1.5em;
+  font-family: 'Courier Prime', monospace;
+}
+
+.randomMovie {
+  padding: 10px;
+  max-width: 50%;
+  height: 100vh;
+}
+
+.movieData {
+  width: 30%;
+  font-size: 1em;
+  font-family: 'Courier Prime', monospace;
 }
 
 .randomButton {
-  border: none;
-  border-radius: 10px;
-  width: 20%;
-  height: 5%;
-  margin: 10px;
-  cursor: pointer;
+  margin-top: 15px;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+	background: white;
+	border: 2px solid black;
+	box-shadow: 5px 5px 0 black,
+		-5px -5px 0 black,
+		-5px 5px 0 black,
+		5px -5px 0 black;
+	transition: 500ms ease-in-out;
 }
 
 .randomButton:hover {
-  opacity: 0.5;
+	box-shadow: 20px 5px 0 black, -20px -5px 0 black;
 }
+
+.randomButton:focus {
+	outline: none;
+}
+
+
 
 .moviePoster {
   max-width: 100%;
@@ -120,14 +149,12 @@ img {
   width: 50px;
   height: 50px;
   border: 10px solid #f3f3f3;
-  
   border-top: 10px solid #383636;
-  
   border-radius: 50%;
   animation: spinner 1.5s linear infinite;
   position: fixed;
-  left: 50%;
-  top: 45%;
+  left: 47%;
+  top: 40%;
   z-index: 1000;
 
 }
@@ -138,8 +165,8 @@ img {
   align-items: center;
   text-align: center;
   height: 350px;
-  left: 46%;
-  top: 55%;
+  left: 42%;
+  top: 49%;
 }
 
 .spinnerText{
@@ -160,6 +187,7 @@ img {
   
 }
 
+
 /* Watchlist */
 
 h3 {
@@ -171,17 +199,39 @@ h3 {
   height: 100vh;
 }
 
+.addButton {
+  margin-top: 15px;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+	background: white;
+	border: 2px solid black;
+	box-shadow: 5px 5px 0 black,
+		-5px -5px 0 black,
+		-5px 5px 0 black,
+		5px -5px 0 black;
+	transition: 500ms ease-in-out;
+}
+
+.addButton:hover {
+	box-shadow: 20px 5px 0 black, -20px -5px 0 black;
+}
+
+.addButton:focus {
+	outline: none;
+}
+
 .movieList {
  display:flex;
  margin: 20px 0;
  padding: 1rem;
-  
-  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
     0 5px 15px 0 rgba(36, 35, 35, 0.08);
-  
-  border-radius: 0.5rem;
-  
-  border-left: 0 solid #473e99;
+border-radius: 0.5rem;  
+border-left: 0 solid #473e99;
   transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
 }
 
