@@ -146,9 +146,23 @@ h3 {
 }
 
 .smallPoster {
+
  max-width: 20%;
  margin: 10px;
  border-radius: 10px;
+}
+
+.listText{
+  text-align: left;
+}
+.smallTitle{
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.smallOverview{
+  font-size: 0.8em;
 }
 
 .removeButton{

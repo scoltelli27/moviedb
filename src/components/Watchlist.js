@@ -47,9 +47,11 @@ export default function Watchlist(props) {
                 src={watch.poster}
                 alt="Movie poster"
               />
-              <div>
-                <h3>{watch.body}</h3>
-                <span>{watch.overview.substring(0, 250)}...</span>
+              <div className="listText">
+                <h3 className="smallTitle">{watch.body}</h3>
+                <span className="smallOverview">
+                  {watch.overview.substring(0, 250)}...
+                </span>
               </div>
               <img
                 src={trash}
