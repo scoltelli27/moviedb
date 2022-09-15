@@ -4,7 +4,7 @@ export default function Random(props) {
   return (
     <>
       <div className="randomMovie">
-        <h2>{props.movieData.title}</h2>
+        <h2 className="title">{props.movieData.title}</h2>
         <span className="movieData">
           {props.movieData.overview.substring(0, 250)}...
         </span>
