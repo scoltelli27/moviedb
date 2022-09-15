@@ -45,7 +45,7 @@ export default function Watchlist(props) {
               <img
                 className="smallPoster"
                 src={watch.poster}
-                alt="Movie poster"
+                alt="Movie poster from list"
               />
               <div className="listText">
                 <h3 className="smallTitle">{watch.body}</h3>
@@ -54,6 +54,7 @@ export default function Watchlist(props) {
                 </span>
               </div>
               <img
+                alt="Delete icon"
                 src={trash}
                 className="removeButton"
                 onClick={(event) => removeWatch(event, watch.id)}
