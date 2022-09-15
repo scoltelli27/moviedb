@@ -6,8 +6,36 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100vh;
+}
+/* Custom scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(88, 87, 87);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(59, 70, 97);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(63, 62, 62);
+}
 
 
+/* Body */
 body {
   margin: 0;
   line-height: 1.5;
@@ -28,7 +56,6 @@ img {
   padding-inline: 6em;
   margin-inline: auto;
   max-width: 80rem;
-
 }
 
 .randomMovie {
@@ -44,7 +71,8 @@ img {
 
 
 .mainContent {
-  overflow:scroll;
+  height: 90vh;
+  overflow: auto;
   display: flex;
   background-color: rgb(37, 49, 109);
   border-radius: 10px;
@@ -87,9 +115,9 @@ img {
   width: 50px;
   height: 50px;
   border: 10px solid #f3f3f3;
-  /* Light grey */
+  
   border-top: 10px solid #383636;
-  /* Black */
+  
   border-radius: 50%;
   animation: spinner 1.5s linear infinite;
   position: fixed;
@@ -103,9 +131,15 @@ img {
   position: fixed;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 350px;
   left: 46%;
   top: 55%;
+}
+
+.spinnerText{
+  font-size: 1.1em;
+  color: white;
 }
 
 .overlay {
