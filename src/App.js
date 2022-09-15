@@ -5,6 +5,7 @@ import Random from "./components/Random";
 import Watchlist from "./components/Watchlist";
 import Spinner from "./components/Spinner";
 import Overlay from "./components/Overlay";
+import Footer from "./components/Footer";
 
 function App() {
   // Spinner state
@@ -58,6 +59,7 @@ function App() {
         <Random movieData={movieData} randomNumber={randomNumber} />
         <Watchlist movieData={movieData} />
       </div>
+      <Footer />
     </div>
   );
 }

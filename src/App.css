@@ -277,3 +277,13 @@ border-left: 0 solid #473e99;
 .removeButton:hover {
   opacity: 0.5;
 }
+
+.footer {
+  padding-bottom: 20px;
+}
+
+.tmdblogo{
+  max-width: 4%;
+  display: inline;
+  margin-right: 10px;
+}
