@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
+import trash from "../trash-solid.svg";
+
 export default function Watchlist(props) {
   const [toWatch, setToWatch] = useState(
     JSON.parse(localStorage.getItem("watch")) || []
@@ -18,6 +20,7 @@ export default function Watchlist(props) {
       id: nanoid(),
       body: props.movieData.title,
       poster: props.movieData.poster,
+      overview: props.movieData.overview,
     };
 
     setToWatch((prevWatch) => [newWatch, ...prevWatch]);
@@ -44,14 +47,15 @@ export default function Watchlist(props) {
                 src={watch.poster}
                 alt="Movie poster"
               />
-              <h3>{watch.body}</h3>
-
-              <button
-                className="randomButton"
+              <div>
+                <h3>{watch.body}</h3>
+                <span>{watch.overview.substring(0, 250)}...</span>
+              </div>
+              <img
+                src={trash}
+                className="removeButton"
                 onClick={(event) => removeWatch(event, watch.id)}
-              >
-                Remove
-              </button>
+              />
             </div>
           ))}
         </div>

@@ -121,10 +121,42 @@ h3 {
 
 .movieList {
  display:flex;
+ margin: 20px 0;
+ padding: 1rem;
+  
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+    0 5px 15px 0 rgba(36, 35, 35, 0.08);
+  
+  border-radius: 0.5rem;
+  
+  border-left: 0 solid #473e99;
+  transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+}
+
+.movieList:hover {
+  border-left: 0.5rem solid #473e99;
+}
+
+.movieList > :first-child {
+  margin-top: 0;
+}
+
+.movieList > :last-child {
+  margin-bottom: 0;
 }
 
 .smallPoster {
  max-width: 20%;
  margin: 10px;
  border-radius: 10px;
+}
+
+.removeButton{
+  width: 5%;
+  cursor:pointer;
+  margin: 5px;
+}
+
+.removeButton:hover {
+  opacity: 0.5;
 }
